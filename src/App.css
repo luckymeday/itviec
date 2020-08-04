@@ -1,0 +1,147 @@
+.App {
+  background: #092c5a;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-weight: 400;
+  height: 100%;
+  padding-bottom: 40px;
+}
+.search-header {
+  background-color: #092c5a;
+  min-height: 280px;
+}
+.logo-itviec {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  height: 80px;
+}
+.search-form-wrapper {
+  margin: 40px auto 50px;
+}
+.search-section-wrapper {
+  background: white;
+  border: 1px solid #f2f4f7;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+}
+.search-field-wrapper {
+  align-items: center;
+  display: flex;
+  /* height: 100%;
+  margin-left: 15px; */
+}
+.search-box {
+  border: 0;
+  font-size: 20px;
+  /* height: 90%; */
+  line-height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 90%;
+}
+.search-button {
+  background-color: #3625d4;
+  border: 0;
+  border-radius: 0;
+  color: #f2f4f7;
+  font-size: 20px;
+  height: 61px;
+  width: 100%;
+}
+.search-button:hover {
+  background-color: #1627be;
+  border: 0;
+  border-radius: 0;
+  color: #f2f4f7;
+  font-size: 20px;
+  height: 61px;
+  width: 100%;
+}
+.icon-fasearch {
+  margin-left: 10px;
+  /* margin-right: 10px; */
+}
+.job-list {
+  background-color: #f2f4f7;
+  border: 1px solid #f2f4f7;
+  margin-top: -50px;
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+.job-content {
+  border-top: 2px solid rgba(92, 120, 241, 0.5);
+  border-bottom: 2px solid rgba(92, 120, 241, 0.5);
+  background: #f1f1f5c7 !important;
+  padding: 27px 0;
+  /* transition: all 0.25s ease; */
+}
+.job-content:hover {
+  background: white !important;
+  border-color: transparent;
+  box-shadow: 0 0 5px 1px #3625d4;
+  cursor: pointer;
+}
+.jobcard-logo {
+  margin: 10px 30px 20px 30px;
+}
+.jobcard-descriptions {
+  padding-left: 15px;
+  text-align: left;
+}
+.jobcard-title {
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+.benefit-list {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px 0px;
+  padding-left: 19px;
+}
+.badge-style {
+  margin-right: 15px;
+}
+.date-location-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  height: 100%;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-left: 10px;
+  min-width: 100px;
+  text-align: right;
+}
+.hotjob-label {
+  color: #f1f5c7;
+  background: #ee2b2b;
+  /* min-width: 45px; */
+  padding: 2px 5px;
+  text-align: center;
+}
+.jobcard-location {
+  color: rgb(15, 14, 14);
+}
+.job-time {
+  color: #1627be
+}
+.navigation {
+  background-color: #092c5a;
+  font-size: 40px;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.white-container {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  overflow: auto;
+  padding: 50px;
+}

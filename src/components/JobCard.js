@@ -21,7 +21,7 @@ export default function JobCard({ job }) {
                 <Col xs={8}>
                     <div className="jobcard-descriptions">
                         <h2 className="jobcard-title">{job.title}</h2>
-                        <div>$ {job.salary}</div>y
+                        <div>$ {job.salary}</div>
 
                         <div>
                             <ul className="benefit-list">

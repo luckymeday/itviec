@@ -38,17 +38,17 @@ export default function Jobs() {
     const handleSearch = (e) => {
         let filteredJobs = jobList;
         if (e) {
-          e.preventDefault();
-          history.push(`/jobs/?${QUERYSTR_PREFIX}=${encodeURIComponent(keyword)}`);
+            e.preventDefault();
+            history.push(`/jobs/?${QUERYSTR_PREFIX}=${encodeURIComponent(keyword)}`);
         }
         if (keyword) {
             filteredJobs = jobList.filter(job =>
-              job.title.toLowerCase().includes(keyword.toLowerCase())
+                job.title.toLowerCase().includes(keyword.toLowerCase())
             );
-          }
-          console.log("filterdjob",filteredJobs)
-           setJobList(filteredJobs);
-      };
+        }
+        console.log("filterdjob", filteredJobs)
+        setJobList(filteredJobs);
+    };
 
     // const getDetail = (id) => {
     //     history.push(`/jobs/${id}`)
@@ -78,21 +78,20 @@ export default function Jobs() {
                         <Row className="search-form-wrapper">
                             <Col xs={12} md={10}>
                                 <div className="search-section-wrapper">
-                                   <Row className="search-field-wrapper" noGutters={true}>
-                                    <FontAwesomeIcon
+                                    <Row className="search-field-wrapper" noGutters={true}>
+                                        <FontAwesomeIcon
                                             icon={faSearch}
-                                            className="icon-fasearch"
-                                        /> 
-
-                                    <Col col={12}>
-                                        <input
-                                            value={keyword}
-                                            type="text"
-                                            className="search-box"
-                                            placeholder="Keyword"
-                                            onChange={(e) => setKeyword(e.target.value)}
+                                            className="icon-fasearch fa-lg"
                                         />
-                                    </Col>
+                                        <Col col={12}>
+                                            <input
+                                                value={keyword}
+                                                type="text"
+                                                className="search-box"
+                                                placeholder="Keyword"
+                                                onChange={(e) => setKeyword(e.target.value)}
+                                            />
+                                        </Col>
                                     </Row>
                                 </div>
                             </Col>
@@ -106,10 +105,11 @@ export default function Jobs() {
 
             <Container>
                 <div className="job-list">
-                    <h1>
-                        {jobList && jobList.length} IT job{jobList.length != 1 ? "s" : ""} in Vietnam
-            for you{" "}
-                    </h1>
+                    <br></br>
+                    <h2>
+                        {jobList && jobList.length} IT job{jobList.length != 1 ? "s" : ""} in Vietnam for you{" "}
+                    </h2>
+                    <br></br>
                     {jobList && jobList.map(item => <JobCard job={item} key={item.id} />)}
                 </div>
             </Container>
