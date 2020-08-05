@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Homepage from "./pages/Homepage";
+// import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Jobs from "./pages/Jobs";
 import Details from "./pages/Details";
@@ -26,7 +26,7 @@ export default function App() {
         <Route exact path="/jobs" component={Jobs} />
 
         {/* <Route exact path="/jobs/:id" render={(props) => <Details jobTitle="engineer" props={props}/>}/> */}
-        <ProtectedRoute exact path="/jobs/:id" render={(props) => <Details jobTitle="engineer" {...props} />} />
+        <ProtectedRoute exact path="/jobs/:id" render={(props) => <Details {...props} />} />
 
       </Switch>
       <footer className="footer">

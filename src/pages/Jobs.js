@@ -119,7 +119,7 @@ export default function Jobs() {
                         {jobList && jobList.length} IT job{jobList.length !== 1 ? "s" : ""} in Vietnam for you{" "}
                     </h2>
                     <br></br>
-                    {jobList && jobList.map(item => <JobCard job={item} key={item.id} />)}
+                    {jobList && jobList.map(item => <JobCard job={item} />)}
                 </div>
             </Container>
 
@@ -175,7 +175,7 @@ export default function Jobs() {
                         </Col>
                     </Row>
                 </div> */}
-   
+
         </div>
     );
 }

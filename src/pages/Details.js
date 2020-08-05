@@ -9,7 +9,7 @@ import moment from "moment";
 
 const apiAddress = process.env.REACT_APP_SERVER_URL;
 
-export default function Details({ job }) {
+export default function Details() { // (props) <=> (props.job, props.jobTitle) <=> ({job, jobTitle})
 
     let { id } = useParams();
     let [jobs, setJobs] = useState(null)
@@ -31,6 +31,8 @@ export default function Details({ job }) {
 
     return (
         <div className="App">
+            {/* <h1>{jobTitle}</h1> */}
+
             <div className="navigation">
                 <Container>
                     <img
