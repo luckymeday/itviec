@@ -5,6 +5,11 @@
   height: 100%;
   padding-bottom: 40px;
 }
+.footer{
+  background: #092c5a;
+  height: 100%;
+  padding-bottom: 10%;
+}
 .search-header {
   background-color: #092c5a;
   min-height: 280px;
@@ -16,7 +21,7 @@
   height: 80px;
 }
 .search-form-wrapper {
-  margin: 40px auto 50px;
+  margin: 50px auto 50px;
 }
 .search-section-wrapper {
   background: white;
@@ -65,7 +70,7 @@
 .job-list {
   background-color: #f2f4f7;
   border: 1px solid #f2f4f7;
-  margin-top: -50px;
+  margin-top: 0px;
   padding: 0 10px;
   padding-bottom: 10px;
 }

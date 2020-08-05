@@ -17,10 +17,11 @@ function useQuery() {
 const QUERYSTR_PREFIX = "q";
 
 export default function Jobs() {
-    let [jobList, setJobList] = useState([])
+    let [jobList, setJobList] = useState([]); // for showing on UI
+    let [originalList, setOriginalList] = useState([]); // keep the original list
     let history = useHistory();
     let query = useQuery();
-    let [keyword, setKeyword] = useState(query.get(QUERYSTR_PREFIX));
+    let [keyword, setKeyword] = useState(query.get("q"));
 
     const getData = async () => {
         try {
@@ -29,25 +30,29 @@ export default function Jobs() {
             let response = await fetch(url);
             let result = await response.json();
             console.log("result", result);
-            setJobList(result)
+            setJobList(result);
+            setOriginalList(result);
         } catch (err) {
             console.log("err", err.message);
         }
     };
 
-    const handleSearch = (e) => {
-        let filteredJobs = jobList;
+    const searchByKeyword = (e) => {
+        console.log("we are in searchByKeyword")
+        let filteredList = originalList;
         if (e) {
             e.preventDefault();
-            history.push(`/jobs/?${QUERYSTR_PREFIX}=${encodeURIComponent(keyword)}`);
+            console.log("keyword", keyword)
+            // history.push(`/jobs/?${QUERYSTR_PREFIX}=${encodeURIComponent(keyword)}`);
+            history.push(`/jobs?q=${keyword}`);
         }
         if (keyword) {
-            filteredJobs = jobList.filter(job =>
+            filteredList = originalList.filter(job =>
                 job.title.toLowerCase().includes(keyword.toLowerCase())
             );
         }
-        console.log("filterdjob", filteredJobs)
-        setJobList(filteredJobs);
+        console.log("filteredList", filteredList)
+        setJobList(filteredList);
     };
 
     // const getDetail = (id) => {
@@ -58,7 +63,11 @@ export default function Jobs() {
         getData();
     }, []);
 
-    if (jobList.length == 0) {
+    useEffect(() => {
+        searchByKeyword();
+    }, [originalList]);
+
+    if (jobList.length === 0) {
         return <h1>Loading</h1>;
     }
     console.log('jobList:', jobList)
@@ -74,7 +83,7 @@ export default function Jobs() {
                             src="https://itviec.com/assets/logo-itviec-65afac80e92140efa459545bc1c042ff4275f8f197535f147ed7614c2000ab0f.png"
                         />
                     </Col>
-                    <Form onSubmit={handleSearch}>
+                    <Form onSubmit={(e) => searchByKeyword(e)}>
                         <Row className="search-form-wrapper">
                             <Col xs={12} md={10}>
                                 <div className="search-section-wrapper">
@@ -107,7 +116,7 @@ export default function Jobs() {
                 <div className="job-list">
                     <br></br>
                     <h2>
-                        {jobList && jobList.length} IT job{jobList.length != 1 ? "s" : ""} in Vietnam for you{" "}
+                        {jobList && jobList.length} IT job{jobList.length !== 1 ? "s" : ""} in Vietnam for you{" "}
                     </h2>
                     <br></br>
                     {jobList && jobList.map(item => <JobCard job={item} key={item.id} />)}
@@ -166,7 +175,7 @@ export default function Jobs() {
                         </Col>
                     </Row>
                 </div> */}
-
+   
         </div>
     );
 }

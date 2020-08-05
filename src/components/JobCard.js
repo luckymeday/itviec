@@ -55,6 +55,7 @@ export default function JobCard({ job }) {
                     </div>
                 </Col>
             </Row>
+
         </div>
     );
 }

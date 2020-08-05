@@ -49,7 +49,7 @@ export default function Details({ job }) {
                 <div className="white-container">
                     <Row>
                         <Col>
-                            <img src={jobs.img}/>
+                            <img src={jobs.img} />
                         </Col>
                         <Col xs={10}>
                             <h2>{jobs.title}</h2>
@@ -103,7 +103,6 @@ export default function Details({ job }) {
                     </Row>
                 </div>
             </Container>
-
 
 
         </div>

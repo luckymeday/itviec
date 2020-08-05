@@ -29,6 +29,9 @@ export default function App() {
         <ProtectedRoute exact path="/jobs/:id" render={(props) => <Details jobTitle="engineer" {...props} />} />
 
       </Switch>
+      <footer className="footer">
+
+      </footer>
     </div>
   );
 }
