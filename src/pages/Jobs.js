@@ -68,7 +68,7 @@ export default function Jobs() {
     }, [originalList]);
 
     if (jobList.length === 0) {
-        return <h1>Loading</h1>;
+        return <div className="loading">Loading..., wait a sec!</div>;
     }
     console.log('jobList:', jobList)
     return (

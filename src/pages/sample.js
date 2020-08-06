@@ -33,6 +33,7 @@ function reducer(state = initialstate, action) {
         case "LOGIN_SUCCESS":
             state.loading = false;
             break;
+            
         case "LOGIN_FAILURE":
             state.loading = false;
             state.error = action.payload;
@@ -45,3 +46,16 @@ function reducer(state = initialstate, action) {
 }
 
 export default reducer;
+
+// Login
+const LoginButton = () => {
+    return user.email ? (
+      <Button variant="outline-success" onClick={() => dispatch({ type: "LOGOUT" })}>
+        SIGN OUT
+      </Button>
+    ) : (
+      <Button variant="outline-success" onClick={() => history.push("/")}>
+        SIGN IN
+      </Button>
+    );
+  };

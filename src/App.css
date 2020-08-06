@@ -5,6 +5,15 @@
   height: 100%;
   padding-bottom: 40px;
 }
+.loading{
+  text-align: center;
+   background: #092c5a;
+   height: 550px;
+   color:white;
+   font-size: 50px;
+   font-family: monospace;
+}
+ 
 .footer{
   background: #092c5a;
   height: 100%;
@@ -46,7 +55,7 @@
   width: 90%;
 }
 .search-button {
-  background-color: #3625d4;
+  background-color: #1e30cf;
   border: 0;
   border-radius: 0;
   color: #f2f4f7;
@@ -55,7 +64,7 @@
   width: 100%;
 }
 .search-button:hover {
-  background-color: #1627be;
+  background-color: #431c77;
   border: 0;
   border-radius: 0;
   color: #f2f4f7;
@@ -158,7 +167,7 @@
   margin-right: 10px;
 }
 .login-button {
-  background-color: #3625d4;
+  background-color: #1e30cf;
   border: 0;
   border-radius: 0;
   color: #f2f4f7;
@@ -167,7 +176,7 @@
   width: 70px;
 }
 .login-button:hover {
-  background-color: #1627be;
+  background-color: #431c77;
   border: 0;
   border-radius: 0;
   color: #f2f4f7;
