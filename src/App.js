@@ -6,9 +6,11 @@ import Login from "./pages/Login";
 import Jobs from "./pages/Jobs";
 import Details from "./pages/Details";
 import { Switch, Route, Redirect } from "react-router-dom";
+import {useSelector} from "react-redux"
 
 export default function App() {
-  let [user, setUser] = useState({ isAuthenticated: true });
+  // let [user, setUser] = useState({ isAuthenticated: true });
+  const user = useSelector(state => state.user)
 
   const ProtectedRoute = (props) => {
     if (user.isAuthenticated === true) {

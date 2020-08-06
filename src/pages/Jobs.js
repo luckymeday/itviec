@@ -77,11 +77,12 @@ export default function Jobs() {
                 <Container>
                     <Col>
                         {" "}
-                        <img
-                            className="logo-itviec"
-                            alt="itviec"
-                            src="https://itviec.com/assets/logo-itviec-65afac80e92140efa459545bc1c042ff4275f8f197535f147ed7614c2000ab0f.png"
-                        />
+                        <a href="/">
+                            <img
+                                className="logo-itviec"
+                                alt="itviec"
+                                src="https://itviec.com/assets/logo-itviec-65afac80e92140efa459545bc1c042ff4275f8f197535f147ed7614c2000ab0f.png"
+                            /></a>
                     </Col>
                     <Form onSubmit={(e) => searchByKeyword(e)}>
                         <Row className="search-form-wrapper">
@@ -176,6 +177,6 @@ export default function Jobs() {
                     </Row>
                 </div> */}
 
-        </div>
+        </div >
     );
 }
